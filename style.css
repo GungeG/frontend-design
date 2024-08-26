@@ -8,5 +8,51 @@
     --hide-overlay: 0;
 }
 
-
 /* Begynd her... */
+body{
+    max-width: 1100px;
+    margin: auto;
+}
+@media only screen and (min-width: 800px){
+#grid_1-1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+}
+h1{
+    font-size: 5em;
+    font-weight: bold;
+    color: var(--color-heading);
+}
+p{
+    font-size: 1em;
+    color: var(--color-body)
+}
+button{
+    background-color: var(--color-bg-button);
+    border-radius: 20px;
+    color: var(--color-text-button);
+}
+
+#subgrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+img{
+    border-radius: 20px;
+}
+
+#subgrid img:nth-child(1) {
+    grid-column: 2; /* Middle column in Row 1 */
+  }
+  #subgrid img:nth-child(2) {
+    grid-column: 1; /* First column in Row 2 */
+  }
+  #subgrid img:nth-child(3) {
+    grid-column: 2; /* Middle column spanning Row 2 and Row 3 */
+    grid-row: 2 / 4;
+  }
+  #subgrid img:nth-child(7){
+    grid-column: 2; /* Middle column in Row 4 */
+  } 
